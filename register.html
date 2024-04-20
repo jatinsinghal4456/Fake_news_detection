@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="public/css/form.css">
+</head>
+
+<body>
+    <div class="alert-box">
+        <p class="alert">Hello</p> <!-- Placeholder for alert styling -->
+    </div>
+    <form action="index.php" method="post">
+        <div class="form">
+            <h1 class="heading">Register</h1>
+            <input type="text" placeholder="Name" autocomplete="off" class="name" name="first_name" required>
+            <input type="email" placeholder="Email" autocomplete="off" class="email" name="email_id" required>
+            <input type="password" placeholder="Password" autocomplete="off" name="pass" class="password" required>
+            <button id="redirectButton" class='submit-btn'>Log in</button>
+
+            <script>
+                document.getElementById("redirectButton").addEventListener("click", function () {
+                    window.location.href = "login.html";
+                });
+            </script>
+            <a href="login.html" class="link">Already have an account? Log in here</a>
+        </div>
+    </form>
+
+    <script src="public/js/form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel='stylesheet' href="public/css/home.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <button id="redirectButton" class='logout'>Log out</button>
+        <button id="check_news">Get Result</button> <!-- Added button with correct id -->
+
+        <script>
+            document.getElementById("redirectButton").addEventListener("click", function () {
+                window.location.href = "login.html";
+            });
+
+            // Function to get random Yes/No
+            function check() {
+                var newscheck = Math.random();
+                if (newscheck < 0.5) {
+                    return "True News";
+                } else {
+                    return "Fake News";
+                }
+            }
+
+            // Event listener for random button
+            document.getElementById("check_news").addEventListener("click", function () { // Corrected ID here
+                var result = check();
+                alert(result); // Display result in an alert box
+            });
+        </script>
+
+        <h1 class="greeting">Hello Jatin</h1>
+        <textarea class="input-area" placeholder="Enter your news article here..."></textarea>
+
+    </div>
+
+    <script src="public/js/home.js"></script>
+</body>
+
+</html>
